@@ -1,10 +1,12 @@
 class Fibonacci {
     static void main(String[] args){
-        Map<Integer,Long> memory = [:];
-        def num=1;
-        while(num<=40){
-            println fib(num++, memory);
-        }
+        Map<Integer,Long> memory = [1:1,2:1];
+        def num=40;
+
+        println fib(num, memory);
+        // println memory.values();
+        // println memory.keySet();
+        // println memory.size();
         // memory.put(22,2444);
         // memory.put(12,24544);
         // memory.put(29,2457444);
