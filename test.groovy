@@ -1,15 +1,52 @@
 class Test {
     static void main(String[] args){
-        def arr = [2,4,6,7,83,9,4,22,42,67] as int[];
-        String[] str = ["cat","dog","cow"];
-        def res = 0;
+        def ProductCost = [
+            [
+                "ProductID":"ARK-0001",
+                "Cost":45,
+                "ProductGroup": "Homeware"
+            ],
+            [
+                "ProductID":"ARK-0002",
+                "Cost":50,
+                "ProductGroup": "Office Essentials"
+            ],
+            [
+                "ProductID":"ARK-0003",
+                "Cost":75,
+                "ProductGroup": "Homeware"
+            ],
+            [
+                "ProductID":"ARK-0004",
+                "Cost":100,
+                "ProductGroup": "Homeware"
+            ]
+        ]
 
-        // for(int i=0;i<arr.size();i++){
-        //     res+=a;rr[i];
-        // }
-        // for(def num in arr) res+=num;
-        // for(def num : arr) res+=num;
-        // println res; 
-        println arr.sum();
+        println ProductCost.collect{it -> it.Cost}.sum()
     }
 }
+
+@Field List product_cost = [
+[
+	“ProductID” : “ARK-0001”,
+	“ProductGroup” : “Homeware”,
+    "Cost": 45
+],
+[
+	“ProductID” : “ARK-0002”
+	“ProductGroup” : “Office Essentials”,
+    "Cost": 50
+],
+[
+	“ProductID” : “ARK-0003”
+	“ProductGroup” : “Homeware”,
+    "Cost": 75
+	
+],
+[
+	“ProductID” : “ARK-0004”,
+	“ProductGroup” : “Homeware”,
+    "Cost": 100
+]
+]
